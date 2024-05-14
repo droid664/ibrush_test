@@ -71,7 +71,7 @@
         position: absolute;
         top: 50%;
         right: toRem(16px);
-        transform: translateY(-50%);
+        transform: translateY(-50%) rotate(-180deg);
         width: toRem(14px);
         aspect-ratio: 1;
         background-image: url('../img/icons/arrow.svg');
@@ -83,7 +83,7 @@
     }
     &.is-open {
         &::before {
-            transform: translateY(-50%) rotate(-180deg);
+            transform: translateY(-50%) rotate(0);
         }
     }
 }

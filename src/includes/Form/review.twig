@@ -1,0 +1,45 @@
+{% from '../../components/input.twig' import input %}
+{% from '../../components/textarea.twig' import textarea %}
+{% from '../../components/select.twig' import select %}
+
+<form class="form form--review">
+	<div class="form__item">
+		<h3 class="form__subtitle title-4">Оцените статью</h3>
+		{% include "../UI/rating.twig" %}
+	</div>
+	<div class="form__item">
+		<h3 class="form__subtitle title-4">Добавить комментарий к книге</h3>
+		<div class="form__grid">
+			{{
+                input({
+                    type: 'text',
+                    name: 'name',
+                    label: 'Имя'
+                })
+            }}
+			{{
+                input({
+                    type: 'email',
+                    name: 'email',
+                    label: 'Email'
+                })
+            }}
+			{{
+                select({
+                    options: ['JavaScript ниндзя', 'Pragmatic Guide to JavaScript', 'Pro JavaScript Techniques', 'Выразительный JavaScript'],
+                    label: 'Выберите книгу'
+                })
+            }}
+			{{
+                textarea({
+                    className: 'form__textarea',
+                    name: 'name',
+                    label: 'Ваш отзыв'
+                })
+            }}
+		</div>
+	</div>
+	<div class="form__bottom">
+		<button class="form__submit-button button" type="submit">Отправить</button>
+	</div>
+</form>

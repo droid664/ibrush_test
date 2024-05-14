@@ -1,6 +1,8 @@
 .fieldset {
     position: relative;
     &__input {
+        display: block;
+        width: 100%;
         border-radius: toRem(10px);
         border: toRem(1px) solid $gray-300;
         height: toRem(50px);
@@ -9,6 +11,7 @@
         transition: border 0.3s ease;
         &:focus {
             border-color: $blue-100;
+            outline: none;
         }
     }
     &__label {

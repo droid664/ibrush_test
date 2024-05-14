@@ -3,8 +3,8 @@
 		<select data-form-select>
 			{% if props.placeholder %}
 				<option value="" selected disabled hidden>{{props.placeholder}}</option>
-			{% endfor %}
-			{% for optionItem of props.options %}
+			{% endif %}
+			{% for optionItem in props.options %}
 				<option value="{{optionItem}}">{{optionItem}}</option>
 			{% endfor %}
 		</select>

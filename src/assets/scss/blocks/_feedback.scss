@@ -1,0 +1,15 @@
+.feedback {
+    background: $light-100;
+    padding-top: toRem(53px);
+    padding-bottom: toRem(88px);
+    @include MQmax($tablet) {
+        padding-top: toRem(22px);
+        padding-bottom: toRem(50px);
+    }
+    &__title {
+        margin-bottom: toRem(38px);
+        @include MQmax($tablet) {
+            margin-bottom: toRem(28px);
+        }
+    }
+}

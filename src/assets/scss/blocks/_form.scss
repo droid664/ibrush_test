@@ -1,0 +1,41 @@
+.form {
+    &__subtitle {
+        margin-bottom: toRem(12px);
+    }
+    &--review {
+        .form__item {
+            & + .form__item {
+                padding-top: toRem(46px);
+            }
+        }
+    }
+    &__grid {
+        --cols: 3;
+        display: grid;
+        grid-template-columns: repeat(var(--cols), 1fr);
+        gap: toRem(12px);
+        &-item {
+            width: 100%;
+        }
+        @include MQmax($tablet) {
+            --cols: 1;
+        }
+    }
+    &__textarea {
+        grid-column: 1 / 4;
+        @include MQmax($tablet) {
+            grid-column: initial;
+            .fieldset__input {
+                min-height: toRem(200px);
+            }
+        }
+    }
+    &__bottom {
+        padding-top: toRem(22px);
+    }
+    &__submit-button {
+        @include MQmax($tablet) {
+            width: 100%;
+        }
+    }
+}
