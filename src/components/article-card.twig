@@ -1,0 +1,16 @@
+{% from './picture.twig' import picture %}
+
+{% macro articleCard(props) %}
+	<article class="article-card">
+		<a href="#" class="article-card__link"></a>
+		{{
+            picture({
+                className: 'article-card__image',
+                src: props.image.src,
+                ext: props.image.ext,
+            })
+        }}
+		<time class="article-card__date" datetime="{{props.datetime}}">{{props.date}}</time>
+		<h3 class="article-card__title">{{props.title}}</h3>
+	</article>
+{% endmacro %}

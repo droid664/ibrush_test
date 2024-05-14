@@ -8,6 +8,8 @@
 
 // Choises
 @import '../../../node_modules/choices.js/src/styles/choices.scss';
+@import '../../../node_modules/swiper/swiper.scss';
+@import '../../../node_modules/swiper/swiper-vars.scss';
 
 html {
     font-size: 16px;
@@ -55,6 +57,27 @@ body {
     max-width: calc(toRem(738px) + 40px);
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: toRem(20px);
+    .swiper-pagination-bullet {
+        display: block;
+        width: toRem(10px);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: $light-100;
+        transition: all 0.3s ease;
+        transition-property: transform, background;
+        &-active {
+            transform: scale(1.5);
+            background: $blue-100;
+        }
+    }
 }
 
 @import './typography';

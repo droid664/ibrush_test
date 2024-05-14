@@ -1,0 +1,21 @@
+{% from '../components/article-card.twig' import articleCard %}
+
+<section class="similar-posts">
+	<div class="container">
+		<h2 class="similar-posts__title title-2">Похожие посты</h2>
+		<div class="similar-posts__swiper swiper">
+			<div class="swiper-wrapper">
+				{% for post in similarPosts %}
+					<div class="swiper-slide">
+						<div class="similar-posts__slide">
+							{{
+								articleCard(post)
+							}}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+</section>

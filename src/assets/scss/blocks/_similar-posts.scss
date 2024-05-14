@@ -1,0 +1,22 @@
+.similar-posts {
+    padding-top: toRem(60px);
+    padding-bottom: toRem(100px);
+    @include MQmax($tablet) {
+        padding-top: toRem(30px);
+        padding-bottom: toRem(65px);
+    }
+    &__slide {
+        padding-inline: toRem(15px);
+        @include MQmax($tablet) {
+            padding: 0;
+        }
+    }
+    &__swiper {
+        margin-inline: toRem(-15px);
+        margin-bottom: toRem(20px);
+        @include MQmax($tablet) {
+            margin-inline: auto;
+            max-width: toRem(280px);
+        }
+    }
+}
