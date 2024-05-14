@@ -25,6 +25,7 @@ html {
 body {
     overflow-x: hidden;
     font-family: $default-font-family;
+    color: $dark-100;
 }
 
 body.lock {
@@ -45,6 +46,8 @@ body.lock {
         flex: 0 1 auto;
     }
 }
+
+@import './typography';
 
 // components
 @import 'components/**/*.scss';

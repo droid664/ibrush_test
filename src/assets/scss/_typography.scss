@@ -1,0 +1,45 @@
+.title-1 {
+    font-size: toRem(52px);
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    @include MQmax($tablet) {
+        font-size: toRem(34px);
+        line-height: 1.12;
+    }
+}
+
+.title-2 {
+    font-size: toRem(40px);
+    line-height: 0.9;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    @include MQmax($tablet) {
+        font-size: toRem(32px);
+        line-height: 1.14;
+        letter-spacing: -0.01em;
+    }
+}
+
+.title-3 {
+    font-size: toRem(28px);
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    @include MQmax($tablet) {
+        font-size: toRem(22px);
+        line-height: 1.36;
+        letter-spacing: -0.01em;
+    }
+}
+
+.title-4 {
+    font-size: toRem(11px);
+    line-height: 1.64;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-weight: 600;
+    @include MQmax($tablet) {
+        font-size: toRem(11px);
+    }
+}
