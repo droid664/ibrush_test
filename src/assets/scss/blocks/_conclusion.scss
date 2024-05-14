@@ -1,0 +1,23 @@
+.conclusion {
+    padding-top: toRem(50px);
+    padding-bottom: toRem(80px);
+    @include MQmax($tablet) {
+        padding-top: toRem(30px);
+        padding-bottom: toRem(50px);
+    }
+    &__title {
+        margin-bottom: toRem(16px);
+        @include MQmax($tablet) {
+            margin-bottom: toRem(10px);
+        }
+    }
+    &__desc {
+        font-size: toRem(16px);
+        line-height: 1.6;
+        letter-spacing: 0.01em;
+        margin-bottom: 0;
+        @include MQmax($tablet) {
+            font-size: toRem(14px);
+        }
+    }
+}
