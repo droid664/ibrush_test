@@ -1,7 +1,10 @@
 $default-font-family: 'Onest', 'Roboto', Arial, sans-serif;
+$font-base: 16px;
+
 $white: #fff;
 $black: #000;
 $dark-100: #202326;
+$gray-100: #777777;
 
 $z-index--100: 100;
 $z-index--200: 200;
@@ -15,8 +18,6 @@ $z-index--highest: 2000;
 $mobile-sm: 426px;
 $mobile: 576px;
 $mobile-xl: 640px;
-$tablet-m: 743px;
-$tablet: 992px;
-$tablet-xl: 1180px;
+$tablet: 768px;
 $laptop: 1440px;
 $desktop: 1920px;

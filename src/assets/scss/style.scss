@@ -47,6 +47,13 @@ body.lock {
     }
 }
 
+.container {
+    min-width: 320px;
+    max-width: toRem(738px);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 @import './typography';
 
 // components
