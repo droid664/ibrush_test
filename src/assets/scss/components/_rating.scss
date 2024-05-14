@@ -1,0 +1,52 @@
+.rating {
+    display: flex;
+    align-items: center;
+    &__count {
+        font-size: toRem(28px);
+        line-height: 1.29;
+        margin-right: toRem(8px);
+        font-weight: 500;
+    }
+    &__star {
+        width: toRem(28px);
+        aspect-ratio: 1;
+        fill: $yellow-100;
+        transition: fill 0.3s ease;
+    }
+    &__input {
+        display: none;
+        &:checked ~ .rating__label {
+            .rating__star {
+                fill: $gray-200;
+            }
+        }
+    }
+    &__label {
+        display: inline-block;
+        cursor: pointer;
+        padding-inline: 2px;
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    &__label-group {
+        display: flex;
+        @include MQmin($tablet) {
+            &:hover {
+                .rating__label {
+                    .rating__star {
+                        fill: $yellow-100;
+                    }
+                    &:hover ~ .rating__label {
+                        .rating__star {
+                            fill: $gray-200;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
