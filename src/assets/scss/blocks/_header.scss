@@ -1,0 +1,13 @@
+.header {
+    padding-top: toRem(18px);
+    padding-bottom: toRem(18px);
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: toRem(60px);
+        justify-content: space-between;
+    }
+    &__nav {
+        margin-left: auto;
+    }
+}
