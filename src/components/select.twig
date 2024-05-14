@@ -1,0 +1,13 @@
+{% macro select(props) %}
+	<div class="select">
+		<select data-form-select>
+			{% if props.placeholder %}
+				<option value="" selected disabled hidden>{{props.placeholder}}</option>
+			{% endfor %}
+			{% for optionItem of props.options %}
+				<option value="{{optionItem}}">{{optionItem}}</option>
+			{% endfor %}
+		</select>
+	</div>
+
+{% endmacro %}

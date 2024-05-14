@@ -6,6 +6,10 @@
         height: toRem(50px);
         padding-inline: toRem(15px);
         font-size: toRem(14px);
+        transition: border 0.3s ease;
+        &:focus {
+            border-color: $blue-100;
+        }
     }
     &__label {
         position: absolute;

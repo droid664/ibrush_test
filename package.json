@@ -40,6 +40,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "choices.js": "^10.2.0",
     "esbuild-loader": "^4.1.0",
     "gsap": "^3.12.5",
     "gulp-clean-css": "^4.3.0",
