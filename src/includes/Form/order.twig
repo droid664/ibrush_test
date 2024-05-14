@@ -1,0 +1,27 @@
+{% from '../../components/input.twig' import input %}
+
+<form class="form form--order">
+	<div class="form__fields">
+		{{
+            input({
+                type: 'text',
+                name: 'name',
+                label: 'Как вас зовут'
+            })
+        }}
+		{{
+            input({
+                type: 'email',
+                name: 'email',
+                label: 'Ваш email'
+            })
+        }}
+	</div>
+	<div class="form__bottom">
+		<div class="form__submit-button button" type="submit">Отправить</div>
+		<p class="form__policy">
+			Нажимая кнопку «Отправить», вы соглашаетесь с
+			<a href="#" target="_blank">политикой конфиденциальности</a>
+		</p>
+	</div>
+</form>

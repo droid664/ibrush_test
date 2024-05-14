@@ -30,11 +30,10 @@ body {
     font-family: $default-font-family;
     color: $dark-100;
     background: $light-200;
-}
-
-body.lock {
-    overflow: hidden;
-    touch-action: none;
+    &:has(.modal--active) {
+        overflow: hidden;
+        touch-action: none;
+    }
 }
 
 .site {

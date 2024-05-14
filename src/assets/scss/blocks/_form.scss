@@ -2,13 +2,6 @@
     &__subtitle {
         margin-bottom: toRem(12px);
     }
-    &--review {
-        .form__item {
-            & + .form__item {
-                padding-top: toRem(46px);
-            }
-        }
-    }
     &__grid {
         --cols: 3;
         display: grid;
@@ -36,6 +29,32 @@
     &__submit-button {
         @include MQmax($tablet) {
             width: 100%;
+        }
+    }
+    &__policy {
+        font-size: toRem(10px);
+        line-height: 1.6;
+        letter-spacing: 0.01em;
+        text-align: center;
+        max-width: toRem(238px);
+        margin-inline: auto;
+        padding-top: toRem(60px);
+    }
+    &--order {
+        .form__fields {
+            display: flex;
+            flex-direction: column;
+            gap: toRem(12px);
+        }
+        .form__submit-button {
+            width: 100%;
+        }
+    }
+    &--review {
+        .form__item {
+            & + .form__item {
+                padding-top: toRem(46px);
+            }
         }
     }
 }
