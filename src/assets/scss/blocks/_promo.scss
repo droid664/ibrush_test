@@ -1,0 +1,45 @@
+.promo {
+    background: $light-100;
+    padding-top: toRem(60px);
+    padding-bottom: toRem(74px);
+    @include MQmax($tablet) {
+        padding-top: toRem(20px);
+        padding-bottom: toRem(44px);
+    }
+    &__inner {
+        padding-inline: toRem(64px);
+        @include MQmax($tablet) {
+            padding-inline: 0;
+        }
+    }
+    &__image {
+        display: block;
+        margin-bottom: toRem(13px);
+        img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            @include MQmax($tablet) {
+                width: initial;
+            }
+        }
+    }
+    &__desc {
+        font-size: toRem(12px);
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 0;
+        a {
+            text-decoration-skip-ink: none;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    &__container {
+        @include MQmax($tablet) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

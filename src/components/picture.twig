@@ -1,8 +1,17 @@
 {% set BASE_PATH = "./assets/img/" %}
 
 {% macro picture(props) %}
-	<picture class="{{props.className}}">
-		<source type="image/webp" srcset="{{BASE_PATH}}{{props.src}}.webp">
-		<img src="{{BASE_PATH}}{{props.src}}.{{props.ext}}" alt="{{props.alt}}">
-	</picture>
+	{% if props.withMobile %}
+		<picture class="{{props.className}}">
+			<source type="image/webp" srcset="{{BASE_PATH}}{{props.src}}_mobile.webp" media="(max-width: 768px)">
+			<source type="image/{{props.ext}}" srcset="{{BASE_PATH}}{{props.src}}_mobile.webp" media="(max-width: 768px)">
+			<source type="image/webp" srcset="{{BASE_PATH}}{{props.src}}_desktop.webp">
+			<img src="{{BASE_PATH}}{{props.src}}_desktop.{{props.ext}}" alt="{{props.alt}}">
+		</picture>
+	{% else %}
+		<picture class="{{props.className}}">
+			<source type="image/webp" srcset="{{BASE_PATH}}{{props.src}}.webp">
+			<img src="{{BASE_PATH}}{{props.src}}.{{props.ext}}" alt="{{props.alt}}">
+		</picture>
+	{% endif %}
 {% endmacro %}

@@ -1,0 +1,19 @@
+{% from '../components/picture.twig' import picture %}
+
+<div class="promo">
+	<div class="container promo__container">
+		<div class="promo__inner">
+			{{
+                picture({
+                    className: 'promo__image',
+                    src: 'promo/book',
+                    ext: 'jpg',
+                    withMobile: true
+                })
+            }}
+			<p class="promo__desc">Реклама на
+				<a href="blabla.com" target="_blank">blabla.com</a>
+			</p>
+		</div>
+	</div>
+</div>
