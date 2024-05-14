@@ -1,10 +1,10 @@
-{% macro input(props) %}
+{% macro textarea(props) %}
 	<div class="fieldset {{props.className}}">
 		{% if props.label %}
 			<label class="fieldset__label" for="field-{{props.name}}-text">
 				{{props.label}}
 			</label>
 		{% endif %}
-		<input class="fieldset__input" type="{{props.type}}" placeholder="{{props.placeholder}}" name="{{props.name}}" id="field-{{props.name}}-text">
+		<textarea class="fieldset__input" type="{{props.type}}" placeholder="{{props.placeholder}}" name="{{props.name}}" id="field-{{props.name}}-text"></textarea>
 	</div>
 {% endmacro %}

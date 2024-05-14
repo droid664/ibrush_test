@@ -1,4 +1,6 @@
 {% extends "../layouts/default.twig" %}
+{% from '../components/input.twig' import input %}
+{% from '../components/textarea.twig' import textarea %}
 
 {% set TITLE = 'IBrush - тестовое' %}
 
@@ -8,5 +10,19 @@
 		{% include '../includes/promo.twig' %}
 		{% include '../includes/conclusion.twig' %}
 		{% include '../includes/UI/rating.twig' %}
+		{{
+			input({
+				type: 'text',
+                name: 'name',
+                label: 'Имя',
+			})
+		}}
+		{{
+			textarea({
+				type: 'text',
+                name: 'name',
+                label: 'Имя',
+			})
+		}}
 	</div>
 {% endblock %}

@@ -1,0 +1,42 @@
+.fieldset {
+    position: relative;
+    &__input {
+        border-radius: toRem(10px);
+        border: toRem(1px) solid $gray-300;
+        height: toRem(50px);
+        padding-inline: toRem(15px);
+        font-size: toRem(14px);
+    }
+    &__label {
+        position: absolute;
+        top: 50%;
+        left: toRem(15px);
+        transform: translateY(-50%);
+        will-change: transform;
+        color: $gray-100;
+        transition: transform 0.3s ease;
+        transform-origin: 0 0;
+    }
+    &:has(textarea) {
+        .fieldset__input {
+            height: initial;
+            min-height: toRem(146px);
+            padding-top: toRem(17px);
+            padding-bottom: toRem(17px);
+            resize: none;
+        }
+        .fieldset__label {
+            top: toRem(18px);
+        }
+        &:has(.fieldset__input:focus) {
+            .fieldset__label {
+                transform: translateY(-70%) scale(0.55);
+            }
+        }
+    }
+    &:has(.fieldset__input:focus) {
+        .fieldset__label {
+            transform: translateY(-110%) scale(0.55);
+        }
+    }
+}
