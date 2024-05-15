@@ -13,6 +13,10 @@
             border-color: $blue-100;
             outline: none;
         }
+        &:focus + .fieldset__label,
+        &:not(:placeholder-shown) + .fieldset__label {
+            transform: translateY(-117%) scale(0.6);
+        }
     }
     &__label {
         position: absolute;
@@ -38,11 +42,6 @@
         }
         .fieldset__label {
             top: toRem(23px);
-        }
-    }
-    &:has(.fieldset__input:focus) {
-        .fieldset__label {
-            transform: translateY(-117%) scale(0.6);
         }
     }
 }
