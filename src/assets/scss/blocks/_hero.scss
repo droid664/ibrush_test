@@ -1,6 +1,6 @@
 .hero {
     &__inner {
-        padding-top: toRem(138px);
+        padding-top: toRem(120px);
         padding-bottom: toRem(80px);
         border-bottom: toRem(2px) solid $light-100;
         @include MQmax($tablet) {
@@ -20,7 +20,7 @@
     }
     &__image {
         display: block;
-        margin-bottom: toRem(20px);
+        margin-bottom: toRem(15px);
         @include MQmax($tablet) {
             margin-bottom: 0;
             padding-bottom: toRem(20px);
@@ -66,7 +66,7 @@
         &-num {
             font-size: toRem(24px);
             position: relative;
-            margin-bottom: toRem(10px);
+            margin-bottom: toRem(8px);
             @include MQmax($tablet) {
                 display: none;
             }

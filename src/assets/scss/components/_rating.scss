@@ -6,9 +6,10 @@
         line-height: 1.29;
         margin-right: toRem(8px);
         font-weight: 500;
+        margin-bottom: -0.1em;
     }
     &__star {
-        width: toRem(28px);
+        width: toRem(27px);
         aspect-ratio: 1;
         fill: $yellow-100;
         transition: fill 0.3s ease;

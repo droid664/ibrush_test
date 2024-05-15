@@ -7,7 +7,7 @@
         @include reset-list();
         display: flex;
         align-items: center;
-        column-gap: toRem(35px);
+        column-gap: toRem(33px);
         &-child {
             @include reset-list();
             position: absolute;
@@ -25,7 +25,7 @@
             opacity: 0;
             pointer-events: none;
             &-item {
-                margin-bottom: toRem(13px);
+                margin-bottom: toRem(11px);
                 &:last-child {
                     margin-bottom: 0;
                 }

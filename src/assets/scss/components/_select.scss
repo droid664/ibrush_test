@@ -2,6 +2,11 @@
     &__list {
         &--single {
             padding: 0;
+            .choices__item--selectable {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
         .choices__item--disabled {
             display: none;
@@ -70,9 +75,9 @@
         content: '';
         position: absolute;
         top: 50%;
-        right: toRem(16px);
+        right: toRem(14px);
         transform: translateY(-50%) rotate(-180deg);
-        width: toRem(14px);
+        width: toRem(12px);
         aspect-ratio: 1;
         background-image: url('../img/icons/arrow.svg');
         background-repeat: no-repeat;

@@ -1,10 +1,10 @@
 .header {
-    padding-top: toRem(18px);
-    padding-bottom: toRem(18px);
+    padding-top: toRem(15px);
+    padding-bottom: toRem(15px);
     &__inner {
         display: flex;
         align-items: center;
-        gap: toRem(60px);
+        gap: toRem(62px);
         justify-content: space-between;
     }
     &__nav {
@@ -21,6 +21,8 @@
         }
     }
     &__order {
+        padding-inline: toRem(20px);
+        min-height: toRem(45px);
         @include MQmax($tablet) {
             display: none;
         }

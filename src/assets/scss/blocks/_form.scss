@@ -1,12 +1,13 @@
 .form {
     &__subtitle {
-        margin-bottom: toRem(12px);
+        margin-bottom: toRem(7px);
     }
     &__grid {
         --cols: 3;
         display: grid;
         grid-template-columns: repeat(var(--cols), 1fr);
         gap: toRem(12px);
+        padding-top: toRem(6px);
         &-item {
             width: 100%;
         }
