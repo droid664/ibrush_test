@@ -1,0 +1,11 @@
+.scrollbar-horizontal {
+    &::-webkit-scrollbar {
+        background: $light-100;
+        height: toRem(4px);
+        border-radius: toRem(2px);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $blue-100;
+        border-radius: toRem(2px);
+    }
+}

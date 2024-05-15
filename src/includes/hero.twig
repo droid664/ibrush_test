@@ -1,0 +1,25 @@
+{% from '../components/picture.twig' import picture %}
+
+<section class="hero">
+	<div class="container">
+		<div class="hero__inner">
+			<h1 class="hero__title title-1">Путь JavaScript</h1>
+			<div class="hero__wrapper scrollbar-horizontal">
+				{{
+                    picture({
+                        className: 'hero__image',
+                        src: 'hero',
+                        ext: 'jpg'
+                    })
+                }}
+				<time datetime="2024-04-12" class="hero__date">
+					<span class="hero__date-num">12</span>
+					Апреля
+				</time>
+			</div>
+			<p class="hero__desc">
+				Можно выделить три основных направления для прогресса JavaScript
+			</p>
+		</div>
+	</div>
+</section>

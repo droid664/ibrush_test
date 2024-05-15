@@ -82,6 +82,9 @@ body {
 
 @import './typography';
 
+// ui
+@import 'ui/**/*.scss';
+
 // components
 @import 'components/**/*.scss';
 

@@ -1,0 +1,87 @@
+.hero {
+    &__inner {
+        padding-top: toRem(138px);
+        padding-bottom: toRem(80px);
+        border-bottom: toRem(2px) solid $light-100;
+        @include MQmax($tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border: none;
+            padding-top: toRem(48px);
+            padding-bottom: 0;
+        }
+    }
+    &__title {
+        margin-bottom: toRem(38px);
+        @include MQmax($tablet) {
+            margin-bottom: toRem(12px);
+        }
+    }
+    &__image {
+        display: block;
+        margin-bottom: toRem(20px);
+        @include MQmax($tablet) {
+            margin-bottom: 0;
+            padding-bottom: toRem(20px);
+        }
+        img {
+            width: toRem(738px);
+        }
+    }
+    &__desc {
+        font-size: toRem(14px);
+        line-height: 1.43;
+        margin-bottom: 0;
+        @include MQmax($tablet) {
+            margin-bottom: toRem(20px);
+        }
+    }
+    &__wrapper {
+        position: relative;
+        max-width: 100%;
+        @include MQmax($tablet) {
+            order: 1;
+            overflow-x: scroll;
+        }
+    }
+    &__date {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: toRem(16px);
+        right: toRem(16px);
+        background: rgba($color: $white, $alpha: 0.9);
+        border-radius: toRem(18px);
+        line-height: 1.04;
+        font-weight: 500;
+        padding-top: toRem(24px);
+        padding-left: toRem(28px);
+        padding-right: toRem(28px);
+        padding-bottom: toRem(26px);
+        @include MQmax($tablet) {
+            display: none;
+        }
+        &-num {
+            font-size: toRem(24px);
+            position: relative;
+            margin-bottom: toRem(10px);
+            @include MQmax($tablet) {
+                display: none;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: toRem(-14px);
+                transform: translateY(-50%);
+                width: 0;
+                height: 0;
+                border-top: toRem(4px) solid transparent;
+                border-bottom: toRem(4px) solid transparent;
+                border-left: toRem(5px) solid $dark-100;
+            }
+        }
+    }
+}
