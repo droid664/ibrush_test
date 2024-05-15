@@ -1,9 +1,11 @@
 import { customSelect } from './modules/customSelect'
 import Swiper from 'swiper'
 import { Grid, Pagination } from 'swiper/modules'
+import { modal } from './modules/modal'
 
 document.addEventListener('DOMContentLoaded', () => {
     customSelect('[data-form-select]', 'Выберите книгу')
+    modal()
 
     new Swiper('.similar-posts .swiper', {
         slidesPerView: 3,

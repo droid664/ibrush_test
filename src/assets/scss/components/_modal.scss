@@ -11,13 +11,15 @@
     opacity: 0;
     pointer-events: none;
     &__body {
-        padding: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         min-height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     &__content {
+        width: 100%;
         max-width: toRem(380px);
         position: relative;
         background: $white;
@@ -42,12 +44,16 @@
         font-size: toRem(12px);
         line-height: 1.4;
         letter-spacing: 0.01em;
+        @include MQmax($tablet) {
+            max-width: toRem(200px);
+            margin-bottom: toRem(22px);
+        }
     }
     &__close {
         cursor: pointer;
         position: absolute;
-        top: toRem(12px);
-        right: toRem(12px);
+        top: toRem(17px);
+        right: toRem(15px);
         width: toRem(16px);
         aspect-ratio: 1;
         background: transparent;
@@ -66,6 +72,10 @@
         }
         &::after {
             transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        @include MQmax($tablet) {
+            top: toRem(16px);
+            right: toRem(16px);
         }
     }
     &--active {
