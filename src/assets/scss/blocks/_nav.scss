@@ -11,7 +11,7 @@
         &-child {
             @include reset-list();
             position: absolute;
-            top: toRem(28px);
+            top: 100%;
             left: 0;
             background: $white;
             padding-top: toRem(14px);
@@ -39,6 +39,7 @@
         }
     }
     &__item {
+        gap: toRem(5px);
         position: relative;
         &:hover {
             .nav__list-child {
@@ -46,12 +47,29 @@
                 transform: translateY(0);
                 pointer-events: initial;
             }
+            .nav__link {
+                color: $blue-100;
+                &-icon {
+                    stroke: $blue-100;
+                    transform: rotate(-180deg);
+                }
+            }
         }
     }
     &__link {
+        display: flex;
+        align-items: center;
+        gap: toRem(5px);
         font-size: toRem(15px);
         font-weight: 500;
-        padding-top: toRem(17px);
-        padding-bottom: toRem(17px);
+        padding-top: toRem(12px);
+        padding-bottom: toRem(12px);
+        &-icon {
+            width: toRem(10px);
+            height: toRem(6px);
+            stroke: $dark-100;
+            transition: all 0.3s ease;
+            transition-property: stroke, transform;
+        }
     }
 }
