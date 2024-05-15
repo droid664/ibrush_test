@@ -31,5 +31,9 @@
         line-height: 1.37;
         font-weight: 500;
         margin-bottom: 0;
+        padding-right: 43%;
+        @include MQmax($tablet) {
+            padding-right: 20%;
+        }
     }
 }

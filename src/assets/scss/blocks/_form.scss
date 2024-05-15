@@ -19,9 +19,6 @@
         grid-column: 1 / 4;
         @include MQmax($tablet) {
             grid-column: initial;
-            .fieldset__input {
-                min-height: toRem(200px);
-            }
         }
     }
     &__bottom {
@@ -55,6 +52,9 @@
         .form__item {
             & + .form__item {
                 padding-top: toRem(46px);
+                @include MQmax($tablet) {
+                    padding-top: toRem(35px);
+                }
             }
         }
     }

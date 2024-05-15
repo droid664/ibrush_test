@@ -15,7 +15,7 @@
     font-weight: 500;
     letter-spacing: -0.02em;
     @include MQmax($tablet) {
-        font-size: toRem(32px);
+        font-size: toRem(28px);
         line-height: 1.14;
         letter-spacing: -0.01em;
     }

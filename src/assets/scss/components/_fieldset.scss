@@ -32,6 +32,9 @@
             padding-top: toRem(17px);
             padding-bottom: toRem(17px);
             resize: none;
+            @include MQmax($tablet) {
+                min-height: toRem(200px);
+            }
         }
         .fieldset__label {
             top: toRem(23px);
